@@ -1,0 +1,245 @@
+% --------------------------------------------------------------
+% This is all preamble stuff that you don't have to worry about.
+% Head down to where it says "Start here"
+% --------------------------------------------------------------
+ 
+\documentclass[12pt]{article}
+ 
+\usepackage[margin=1in]{geometry} 
+\usepackage{amsmath,amsthm,amssymb}
+ 
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\Z}{\mathbb{Z}}
+ 
+\newenvironment{theorem}[2][Theorem]{\begin{trivlist}
+\item[\hskip \labelsep {\bfseries #1}\hskip \labelsep {\bfseries #2.}]}{\end{trivlist}}
+\newenvironment{lemma}[2][Lemma]{\begin{trivlist}
+\item[\hskip \labelsep {\bfseries #1}\hskip \labelsep {\bfseries #2.}]}{\end{trivlist}}
+\newenvironment{exercise}[2][Exercise]{\begin{trivlist}
+\item[\hskip \labelsep {\bfseries #1}\hskip \labelsep {\bfseries #2.}]}{\end{trivlist}}
+\newenvironment{reflection}[2][Reflection]{\begin{trivlist}
+\item[\hskip \labelsep {\bfseries #1}\hskip \labelsep {\bfseries #2.}]}{\end{trivlist}}
+\newenvironment{proposition}[2][Proposition]{\begin{trivlist}
+\item[\hskip \labelsep {\bfseries #1}\hskip \labelsep {\bfseries #2.}]}{\end{trivlist}}
+\newenvironment{corollary}[2][Corollary]{\begin{trivlist}
+\item[\hskip \labelsep {\bfseries #1}\hskip \labelsep {\bfseries #2.}]}{\end{trivlist}}
+\newenvironment{question}[2][Question]{\begin{trivlist}
+\item[\hskip \labelsep {\bfseries #1}\hskip \labelsep {\bfseries #2.}]}{\end{trivlist}}
+
+ 
+\begin{document}
+
+% --------------------------------------------------------------
+%                         Start here
+% --------------------------------------------------------------
+
+%\renewcommand{\qedsymbol}{\filledbox}
+
+\title{Assignment 3}%replace X with the appropriate number
+\author{Michael Lee\\ %replace with your name
+	CCST9017 - Hidden Order in Daily Life: A Mathematical Perspective \\
+	University Number 3035569110 \\
+	Tutorial Group 009
+} %if necessary, replace with your course title
+
+
+\maketitle
+
+\begin{question}{1a}
+	Write down the payoff matrix of this game
+\end{question}
+\begin{table}[h!]
+	\begin{center}
+		\caption{Payoff matrix}
+		\label{tab:table1}
+		\begin{tabular}{r|c|c} % <-- Alignments: 1st column left, 2nd middle and 3rd right, with vertical lines in between
+
+			  & F       & U       \\
+			\hline
+			A & $(2,2)$ & $(3,1)$ \\
+			R & $(4,0)$ & $(0,4)$ \\
+		\end{tabular}
+	\end{center}
+\end{table}
+
+\begin{question}{1b}
+	Determine if there is any dominant strategy equilibrium and pure Nash equilibrium for this game when the game is played once only.
+\end{question}
+\begin{proof}
+	There are none dominant strategy equilibrium and pure Nash equilibrium
+	\begin{flushleft}
+		If $(F,A)$ is chosen, then Ellen will choose $U$ for greater benefit. \\
+		If $(U,A)$ is chosen, then Toni will choose $R$ for greater benefit. \\
+		If $(F,R)$ is chosen, then Toni will choose $A$ for greater benefit. \\
+		If $(U,R)$ is chosen, then Ellen will choose $F$ for greater benefit. \\
+		$\therefore$ What ever combination of choice if chosen, one of the players would still like to change there strategy. \\
+		$\therefore$ No pure Nash equilibrium exists.\\
+		$\because$ Every dominant strategy equilibrium must be a pure Nash equilibrium.\\
+		$\therefore$ No dominant strategy equilibrium. \\
+	\end{flushleft}
+\end{proof}
+
+\begin{question}{1c}
+	Find one mixed (non-pure) Nash equilibrium for this game when it is played many times.
+\end{question}
+\begin{proof}
+	The deduction is given below. \\
+	Let $p$ be the probability of F is chosen, and $q$ be the probability of A is chosen. \\
+	\begin{table}[h!]
+		\begin{center}
+			\caption{Payoff matrix with probability}
+			\label{tab:table2}
+			\begin{tabular}{r|c|c} % <-- Alignments: 1st column left, 2nd middle and 3rd right, with vertical lines in between
+
+				       & F(p)    & U(1-p)  \\
+				\hline
+				A(q)   & $(2,2)$ & $(3,1)$ \\
+				R(1-q) & $(4,0)$ & $(0,4)$ \\
+			\end{tabular}
+		\end{center}
+	\end{table}
+	Let $E_E$ and $E_T$ be expected payoff of Ellen and Toni respectively.
+	\begin{align*}
+		E_E(p,q) & = 2pq+3(1-p)q+4(p)(1-q)+0(1-p)(1-q) \\
+		E_E(1,q) & = 2q+4(1-q)                         \\
+		E_E(0,q) & = 3q                                \\
+		E_E(p,q) & = 2pq+3(1-p)q+4(p)(1-q)+0(1-p)(1-q) \\
+		         & = 3q(1-p)+p(2q+4(1-q))              \\
+		         & = (1-p)E_E(0,q)+pE_E(1,q)           \\
+		E_T(p,q) & = 2pq+1(1-p)q+0p(1-q)+4(1-p)(1-q)   \\
+		E_T(p,1) & = 2p(1)+1(1-p)(1)+4(1-p)(1-1)       \\
+		         & = 2p+(1-p)                          \\
+		E_T(p,0) & = 4(1-p)(1-0)                       \\
+		         & = 4(1-p)                            \\
+		E_T(p,q) & = q(2p+(1-p)) + 4(1-p)(1-q)         \\
+		         & = qE_T(p,1) + (1-q)E_T(p,0)
+	\end{align*}
+	Hence we have the following equations \\
+	\begin{equation}
+		E_E(p*,q*)\geq E_E(p,q*)
+	\end{equation}
+	\begin{equation}
+		E_T(p*,q*)\geq E_T(p*,q)
+	\end{equation}
+	\begin{equation}
+		E_E(p,q) = p (E_E(1,q)-E_E(0,q)) + E_E(0,q)
+	\end{equation}
+	\begin{equation}
+		E_T(p,q) = q (E_T(p,1)-E_T(p,0)) + E_T(p,0)
+	\end{equation}
+	Substituting $(3)$ to $(1)$
+	\begin{align*}
+		p* (E_E(1,q*)-E_E(0,q*)) + E_E(0,q*) & \geq p (E_E(1,q*)-E_E(0,q*)) + E_E(0,q*) \\
+		(E_E(1,q*)-E_E(0,q*))                & = 0                                      \\
+		E_E(1,q*)                            & = E_E(0,q*)                              \\
+		2q*+4(1-q*)                          & = 3q*                                    \\
+		4-2q*                                & = 3q*                                    \\
+		q*                                   & = 0.8
+	\end{align*}
+	Substituting $(4)$ to $(2)$
+	\begin{align*}
+		q* (E_T(p*,1)-E_T(p*,0)) + E_T(p*,0) & \geq q (E_T(p*,1)-E_T(p*,0)) + E_T(p*,0) \\
+		(E_T(p*,1)-E_T(p*,0))                & = 0                                      \\
+		E_T(p*,1)                            & = E_T(p*,0)                              \\
+		2p*+(1-p*)                           & = 4(1-p*)                                \\
+		2p*+1-p*                             & = 4-4p*                                  \\
+		5p*                                  & = 3                                      \\
+		p*                                   & = 0.6
+	\end{align*}
+	Verifying combination of $(0.6,0.8)$
+	\begin{align*}
+		E_E(0.6,q) & =2(0.6)q+3(1-0.6)q+4(0.6)(1-q) \\
+		           & =1.2q+3+1.2q+2.4-2.4q          \\
+		           & =2.4
+	\end{align*}
+	Hence Ellen has no incentive to change his position when $p=0.6$
+	\begin{align*}
+		E_T(p,0.8) & =2p(0.8)+(1-p)(0.8)+4(1-p)(1-0.8) \\
+		           & =1.6p+0.8-0.8p+0.8-0.8p           \\
+		           & =1.6
+	\end{align*}
+	Hence Toni has no incentive to change his position when $q=0.8$ \\
+	Hence $(0.6,0.8)$ is a mixed Nash equilibrium. \\
+\end{proof}
+
+\begin{question}{2a}
+	Write down the payoff function for each player.
+\end{question}
+\begin{proof}
+	Below gives the payoff functions
+	\begin{table}[h!]
+		\begin{center}
+			\caption{Payoff functions}
+			\label{tab:table4}
+			\begin{tabular}{r|c|c}
+
+				     & Player 1       & Player 2       \\
+				\hline
+				Won  & $v_1(B)-b_1$   & $v_2(B)-b_2$   \\
+				Lost & $v_1(M)-4+b_2$ & $v_2(M)-4+b_1$ \\
+			\end{tabular}
+		\end{center}
+	\end{table}
+\end{proof}
+
+\begin{question}{2b}
+	What is the best strategy for player 1 if player 1 knows player 2 is going to submit the bid $b_2 =1$ ?
+\end{question}
+\begin{proof}
+	Below provides the deduction \\
+	For $b_2=1$, \\
+	if player 1 wins, his payoff is $v_1(B)-b_1$, where $b_1>1$ \\
+	If he loses, his payoff is $v_1(M)-4+1=v_1(M)-3$
+	\begin{align*}
+		\because   & v_1(B) > v_1(M)                                   \\
+		\therefore & \text{ There must exists some }b_1>1\text{ that } \\
+		           & v_1(B)-b_1  >v_1(M)-3
+	\end{align*}
+	Therefore, player 1 should make a minimum winning bid.\\
+	It is given that for $b_1=b_2$, player 1 wins.\\
+	Hence he should make a bid of $b_1=1$
+\end{proof}
+
+\begin{question}{2c}
+	For this auction game, is it possible to have a Nash equilibrium of the form $(k,k)$ where $0 \leq k \leq 2$ ?
+\end{question}
+\begin{proof}
+	Below discuss such possibility \\
+	For a outcome of $(k,k)$,
+	\begin{equation}
+		b_1=b_2=k
+	\end{equation}
+	Hence player 1 wins with a payoff of
+	\begin{equation}
+		v_1(B)-k
+	\end{equation}
+	and player 2 loses with a payoff of
+	\begin{equation}
+		v_2(M)-4+k
+	\end{equation}
+	However, for player 2, if he/she make a slightly higher bid of
+	$k+\Delta k$, where $\Delta k > 0$
+	Then he wins with a payoff of
+	\begin{equation}
+		v_2(B)-k-\Delta k
+	\end{equation}
+	It is given that
+	\begin{equation}
+		v_2(B)>v_2(M)
+	\end{equation}
+	and for $0 \leq k \leq 2$
+	\begin{equation}
+		-k\geq-4+k
+	\end{equation}
+	hence there must exists some $\Delta k$ that
+	\begin{equation}
+		v_2(B)-k-\Delta k>v_2(M)-4+k
+	\end{equation}
+	Therefore, for any $k$ where $0 \leq k \leq 2$, player 2 would make a sightly higher bid $k+\Delta k$ to reduce his/her payoff.\\
+	Hence no Nash equilibrium exists.
+\end{proof}
+% --------------------------------------------------------------
+%     You don't have to mess with anything below this line.
+% --------------------------------------------------------------
+
+\end{document}
