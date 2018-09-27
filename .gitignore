@@ -1,3 +1,4 @@
+/.vscode
 /hku-ccst9017-assignment-*/*
 !/hku-ccst9017-assignment-*/*.pdf
 !/hku-ccst9017-assignment-*/*.tex
