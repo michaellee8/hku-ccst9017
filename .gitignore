@@ -4,6 +4,11 @@
 !/hku-ccst9017-assignment-*/*.tex
 !/hku-ccst9017-assignment-*/img/
 !/hku-ccst9017-assignment-*/src/
+/hku-math1853-assignment-*/*
+!/hku-math1853-assignment-*/*.pdf
+!/hku-math1853-assignment-*/*.tex
+!/hku-math1853-assignment-*/img/
+!/hku-math1853-assignment-*/src/
 !*.pdf
 !*.tex
 !README.md
