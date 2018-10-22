@@ -1,0 +1,146 @@
+% --------------------------------------------------------------
+% This is all preamble stuff that you don't have to worry about.
+% Head down to where it says "Start here"
+% --------------------------------------------------------------
+ 
+
+\documentclass[12pt]{article}
+    \usepackage[margin=1in]{geometry} 
+	\usepackage{amsmath,amsthm,amssymb}
+	\makeatletter
+\renewcommand*\env@matrix[1][*\c@MaxMatrixCols c]{%
+  \hskip -\arraycolsep
+  \let\@ifnextchar\new@ifnextchar
+  \array{#1}}
+\makeatother
+     
+    \newcommand{\N}{\mathbb{N}}
+    \newcommand{\Z}{\mathbb{Z}}
+    \newcommand{\matr}[1]{\mathbf{#1}}
+    \newenvironment{theorem}[2][Theorem]{\begin{trivlist}
+    \item[\hskip \labelsep {\bfseries #1}\hskip \labelsep {\bfseries #2.}]}{\end{trivlist}}
+    \newenvironment{lemma}[2][Lemma]{\begin{trivlist}
+    \item[\hskip \labelsep {\bfseries #1}\hskip \labelsep {\bfseries #2.}]}{\end{trivlist}}
+    \newenvironment{exercise}[2][Exercise]{\begin{trivlist}
+    \item[\hskip \labelsep {\bfseries #1}\hskip \labelsep {\bfseries #2.}]}{\end{trivlist}}
+    \newenvironment{reflection}[2][Reflection]{\begin{trivlist}
+    \item[\hskip \labelsep {\bfseries #1}\hskip \labelsep {\bfseries #2.}]}{\end{trivlist}}
+    \newenvironment{proposition}[2][Proposition]{\begin{trivlist}
+    \item[\hskip \labelsep {\bfseries #1}\hskip \labelsep {\bfseries #2.}]}{\end{trivlist}}
+    \newenvironment{corollary}[2][Corollary]{\begin{trivlist}
+    \item[\hskip \labelsep {\bfseries #1}\hskip \labelsep {\bfseries #2.}]}{\end{trivlist}}
+    \newenvironment{question}[2][Question]{\begin{trivlist}
+    \item[\hskip \labelsep {\bfseries #1}\hskip \labelsep {\bfseries #2.}]}{\end{trivlist}}
+    \newenvironment{answer}[2][Answer]{\begin{trivlist}
+    \item[\hskip \labelsep {\bfseries #1}\hskip \labelsep {\bfseries #2.}]}{\end{trivlist}}
+     
+    \begin{document}
+    
+% --------------------------------------------------------------
+%                         Start here
+% --------------------------------------------------------------
+    
+%\renewcommand{\qedsymbol}{\filledbox}
+    
+\title{Assignment 2}%replace X with the appropriate number
+\author{Michael Lee\\ %replace with your name
+	MATH1853 \\
+	University Number 3035569110 
+} %if necessary, replace with your course title
+    
+    
+\maketitle
+\begin{answer}{Q. 1}
+\end{answer}
+For eigenvalues of $A$, we have
+\begin{equation}
+	|\matr A-\lambda \matr I| = 0
+\end{equation}
+with
+\begin{align*}
+	          &            
+	\begin{bmatrix}
+	a         & b          \\
+	b         & -a         \\ 
+	\end{bmatrix}
+	-
+	\begin{bmatrix}
+	\lambda   & 0          \\
+	0         & \lambda    \\ 
+	\end{bmatrix} \\
+	=         &            
+	\begin{bmatrix}
+	a-\lambda & b          \\
+	b         & -a-\lambda \\
+	\end{bmatrix}
+\end{align*}
+hence 
+\begin{align*}
+	\begin{vmatrix}
+	a-\lambda                                                     & b                    \\
+	b                                                             & -a-\lambda           \\
+	\end{vmatrix}
+	                                                              & =0                   \\\   
+	-\left(\alpha + \lambda\right)\left(\alpha-\lambda\right)-b^2 & = 0                  
+	-a^2+\lambda^2-b^2                                            & = 0                  \\
+	\lambda^2                                                     & = a^2+b^2            \\
+	\lambda                                                       & = \pm \sqrt{a^2+b^2} 
+\end{align*}
+For eigenvalue $\sqrt{a^2+b^2}$ and eigenvector $v_1$ of $\matr A$, we have
+\begin{align*}
+	\left(\matr A-\sqrt{a^2+b^2} \matr I\right) \matr v_1 & = 0 \\
+	\begin{bmatrix}
+	a + \sqrt{a^{2} + b^{2}} & b                          &   \\
+	b                        & - a + \sqrt{a^{2} + b^{2}} &   
+	\end{bmatrix} 
+	\matr v_1                             & =0  \\
+\end{align*}
+Hence we have 
+\begin{align*}
+	\begin{bmatrix}[cc|c]
+	a + \sqrt{a^{2} + b^{2}} & b                                                                        & 0 \\
+	b                        & - a + \sqrt{a^{2} + b^{2}}                                               & 0 \\
+	\end{bmatrix} \\
+	\begin{bmatrix}[cc|c]
+	1                        & \frac b {a + \sqrt{a^{2} + b^{2}}}                                       & 0 \\
+	1                        & \frac {- a + \sqrt{a^{2} + b^{2}}}b                                      & 0 \\
+	\end{bmatrix} \\
+	\begin{bmatrix}[cc|c]
+	0                        & \frac b {a + \sqrt{a^{2} + b^{2}}} - \frac {- a + \sqrt{a^{2} + b^{2}}}b & 0 \\
+	2                        & \frac b {a + \sqrt{a^{2} + b^{2}}} + \frac {- a + \sqrt{a^{2} + b^{2}}}b & 0 \\
+	\end{bmatrix} \\
+	\begin{bmatrix}[cc|c]
+	0                      & 
+	\frac {b\left(\sqrt{a^{2} + b^{2}}-a \right)} 
+	{\left(a + \sqrt{a^{2} + b^{2}}\right)\left(\sqrt{a^{2} + b^{2}}-a \right)} 
+	- \frac {- a + \sqrt{a^{2} + b^{2}}}b 
+	& 0 \\
+	2                        & 
+	\frac {b\left(\sqrt{a^{2} + b^{2}}-a \right)} 
+	{\left(a + \sqrt{a^{2} + b^{2}}\right)\left(\sqrt{a^{2} + b^{2}}-a \right)} 
+	+ \frac {- a + \sqrt{a^{2} + b^{2}}}b 
+	& 0 \\                                                                       
+	\end{bmatrix} \\
+	\begin{bmatrix}[cc|c]
+	0                      & 
+	\frac {\sqrt{a^{2} + b^{2}}-a} 
+	{b} 
+	- \frac {- a + \sqrt{a^{2} + b^{2}}}b 
+	& 0 \\
+	2                        & 
+	\frac {\sqrt{a^{2} + b^{2}}-a} 
+	{b}
+	+ \frac {- a + \sqrt{a^{2} + b^{2}}}b 
+	& 0 \\                                                                       
+	\end{bmatrix} \\
+	\begin{bmatrix}[cc|c]
+	1                        & \frac  {a + \sqrt{a^{2} + b^{2}}}    b                                   & 0 \\
+	0                        & 0                                                                        & 0 \\
+	\end{bmatrix} \\
+\end{align*}
+which can be reduced to
+% --------------------------------------------------------------
+%     You don't have to mess with anything below this line.
+% --------------------------------------------------------------
+    
+\end{document}
