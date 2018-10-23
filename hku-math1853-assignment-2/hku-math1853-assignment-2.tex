@@ -53,9 +53,9 @@
 \begin{answer}{Q. 1}
 \end{answer}
 For eigenvalues of $A$, we have
-\begin{equation}
+\begin{equation*}
 	|\matr A-\lambda \matr I| = 0
-\end{equation}
+\end{equation*}
 with
 \begin{align*}
 	          &            
@@ -138,7 +138,138 @@ Hence we have
 	0                        & 0                                                                        & 0 \\
 	\end{bmatrix} \\
 \end{align*}
-which can be reduced to
+Therefore
+\begin{equation*}
+	v_1=\begin{bmatrix}
+	1 \\
+	- \frac  {a + \sqrt{a^{2} + b^{2}}} b
+	\end{bmatrix}
+\end{equation*} 
+
+For eigenvalue $-\sqrt{a^2+b^2}$ and eigenvector $v_2$ of $\matr A$, we have
+\begin{align*}
+	\left(\matr A+\sqrt{a^2+b^2} \matr I\right) \matr v_1 & = 0 \\
+	\begin{bmatrix}
+	a - \sqrt{a^{2} + b^{2}} & b                          &   \\
+	b                        & - a - \sqrt{a^{2} + b^{2}} &   
+	\end{bmatrix} 
+	\matr v_1                             & =0  \\
+\end{align*}
+Similar from above, we have
+\begin{align*}
+	\begin{bmatrix}[cc|c]
+	a - \sqrt{a^{2} + b^{2}} & b                                       & 0 \\
+	b                        & - a - \sqrt{a^{2} + b^{2}}              & 0 \\
+	\end{bmatrix} \\
+	\begin{bmatrix}[cc|c]
+	1                        & \frac  {-a - \sqrt{a^{2} + b^{2}}}    b & 0 \\
+	0                        & 0                                       & 0 \\
+	\end{bmatrix} \\
+\end{align*}
+Therefore
+\begin{equation*}
+	v_2=\begin{bmatrix}
+	1 \\
+	\frac  {a + \sqrt{a^{2} + b^{2}}} b
+	\end{bmatrix} \\
+\end{equation*} 
+Eigenpairs of $\matr A$ are $\left(
+\sqrt{a^2+b^2},
+\begin{bmatrix}
+	1                                     \\
+	- \frac  {a + \sqrt{a^{2} + b^{2}}} b 
+\end{bmatrix}
+\right)$ and $\left(
+-\sqrt{a^2+b^2},
+\begin{bmatrix}
+	1                                   \\ 
+	\frac  {a + \sqrt{a^{2} + b^{2}}} b 
+\end{bmatrix}
+\right)$\\
+Since all the eigenvalues are distinct, $\matr A$ is diagonizable. \\ \\
+
+
+For eigenvalues of B, we have
+\begin{equation*}
+	|\matr B - \lambda \matr I| = 0
+\end{equation*}
+with
+\begin{align*}
+	            &              
+	\begin{bmatrix}
+	a           & -b          \\
+	b           & a           \\ 
+	\end{bmatrix}
+	-
+	\begin{bmatrix}
+	\lambda     & 0           \\
+	0           & \lambda     \\ 
+	\end{bmatrix} \\
+	=           &             
+	\begin{bmatrix}
+	a - \lambda & - b         \\
+	b           & a - \lambda \\
+	\end{bmatrix}
+\end{align*}
+hence
+\begin{align*}
+	b^2 + \left(a-\lambda\right)^2 & = 0         \\
+	\left(a-\lambda\right)^2       & = -b^2      \\
+	a-\lambda                      & = \pm b i   \\
+	\lambda                        & = a \pm b i 
+\end{align*}
+
+
+For eigenvalue $a+bi$ and eigenvector $u_1$ for $\matr B$, we have
+\begin{align*}
+	\left[\matr B - \left(a+bi\right) \matr I \right] u_1 &= 0 \\
+	b \left[\begin{matrix}i & -1 \\1 & i\end{matrix}\right] u_1&=0 \\
+\end{align*}
+\begin{align*}
+	\begin{bmatrix}[cc|c]
+	i          & -1           & 0 \\
+	1          & i            & 0 \\
+	\end{bmatrix} \\
+	\begin{bmatrix}[cc|c]
+	i+1        & -1+i         & 0 \\
+	1          & i            & 0 \\
+	\end{bmatrix} \\
+	\begin{bmatrix}[cc|c]
+	(i+1)(i-1) & (-1+i)(-1+i) & 0 \\
+	1          & i            & 0 \\
+	\end{bmatrix} \\
+	\begin{bmatrix}[cc|c]\sqrt{a^2+b^2}
+	-1-1       & -2i          & 0 \\
+	1          & i            & 0 \\
+	\end{bmatrix} \\
+	\begin{bmatrix}[cc|c]
+	2          & 2i           & 0 \\
+	1          & i            & 0 \\
+	\end{bmatrix} \\
+	\begin{bmatrix}[cc|c]
+	1          & i            & 0 \\
+	0          & 0            & 0 \\
+	\end{bmatrix} \\
+	\therefore u_1 = \begin{bmatrix}1 \\ -i \end{bmatrix}
+\end{align*}
+
+For eigenvalue $a-bi$ and eigenvector $u_2$ for $\matr B$, we have
+\begin{align*}
+	\left[\matr B - \left(a-bi\right) \matr I \right] u_2 &= 0 \\
+	b \left[\begin{matrix}-i & -1 \\1 & -i\end{matrix}\right] u_2&=0 \\
+\end{align*}
+Using similar method from above, we will have
+\begin{equation*}
+	u_2 = \begin{bmatrix}-1 \\ i \end{bmatrix}
+\end{equation*}
+Eigenpairs of $\matr B$ are $\left(
+	a+bi,
+\begin{bmatrix}1 \\ -i \end{bmatrix}
+\right)$ and $\left(
+	a-bi,
+\begin{bmatrix}-1 \\ i \end{bmatrix}
+\right)$\\ 
+Since all the eigenvalues are distinct, $\matr B$ is diagonizable. \\
 % --------------------------------------------------------------
 %     You don't have to mess with anything below this line.
 % --------------------------------------------------------------
