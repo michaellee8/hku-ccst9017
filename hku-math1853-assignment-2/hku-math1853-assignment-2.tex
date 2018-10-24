@@ -53,11 +53,11 @@
 \begin{answer}{Q. 1}
 \end{answer}
 For eigenvalues of $A$, we have
-\begin{equation*}
+\begin{equation}
 	|\matr A-\lambda \matr I| = 0
-\end{equation*}
+\end{equation}
 with
-\begin{align*}
+\begin{align}
 	          &            
 	\begin{bmatrix}
 	a         & b          \\
@@ -73,9 +73,9 @@ with
 	a-\lambda & b          \\
 	b         & -a-\lambda \\
 	\end{bmatrix}
-\end{align*}
+\end{align}
 hence 
-\begin{align*}
+\begin{align}
 	\begin{vmatrix}
 	a-\lambda                                                     & b                    \\
 	b                                                             & -a-\lambda           \\
@@ -85,18 +85,18 @@ hence
 	-a^2+\lambda^2-b^2                                            & = 0                  \\
 	\lambda^2                                                     & = a^2+b^2            \\
 	\lambda                                                       & = \pm \sqrt{a^2+b^2} 
-\end{align*}
+\end{align}
 For eigenvalue $\sqrt{a^2+b^2}$ and eigenvector $v_1$ of $\matr A$, we have
-\begin{align*}
+\begin{align}
 	\left(\matr A-\sqrt{a^2+b^2} \matr I\right) \matr v_1 & = 0 \\
 	\begin{bmatrix}
 	a + \sqrt{a^{2} + b^{2}} & b                          &   \\
 	b                        & - a + \sqrt{a^{2} + b^{2}} &   
 	\end{bmatrix} 
 	\matr v_1                             & =0  \\
-\end{align*}
+\end{align}
 Hence we have 
-\begin{align*}
+\begin{align}
 	\begin{bmatrix}[cc|c]
 	a + \sqrt{a^{2} + b^{2}} & b                                                                        & 0 \\
 	b                        & - a + \sqrt{a^{2} + b^{2}}                                               & 0 \\
@@ -137,26 +137,26 @@ Hence we have
 	1                        & \frac  {a + \sqrt{a^{2} + b^{2}}}    b                                   & 0 \\
 	0                        & 0                                                                        & 0 \\
 	\end{bmatrix} \\
-\end{align*}
+\end{align}
 Therefore
-\begin{equation*}
+\begin{equation}
 	v_1=\begin{bmatrix}
 	1 \\
 	- \frac  {a + \sqrt{a^{2} + b^{2}}} b
 	\end{bmatrix}
-\end{equation*} 
+\end{equation} 
 
 For eigenvalue $-\sqrt{a^2+b^2}$ and eigenvector $v_2$ of $\matr A$, we have
-\begin{align*}
+\begin{align}
 	\left(\matr A+\sqrt{a^2+b^2} \matr I\right) \matr v_1 & = 0 \\
 	\begin{bmatrix}
 	a - \sqrt{a^{2} + b^{2}} & b                          &   \\
 	b                        & - a - \sqrt{a^{2} + b^{2}} &   
 	\end{bmatrix} 
 	\matr v_1                             & =0  \\
-\end{align*}
+\end{align}
 Similar from above, we have
-\begin{align*}
+\begin{align}
 	\begin{bmatrix}[cc|c]
 	a - \sqrt{a^{2} + b^{2}} & b                                       & 0 \\
 	b                        & - a - \sqrt{a^{2} + b^{2}}              & 0 \\
@@ -165,14 +165,14 @@ Similar from above, we have
 	1                        & \frac  {-a - \sqrt{a^{2} + b^{2}}}    b & 0 \\
 	0                        & 0                                       & 0 \\
 	\end{bmatrix} \\
-\end{align*}
+\end{align}
 Therefore
-\begin{equation*}
+\begin{equation}
 	v_2=\begin{bmatrix}
 	1 \\
 	\frac  {a + \sqrt{a^{2} + b^{2}}} b
 	\end{bmatrix} \\
-\end{equation*} 
+\end{equation} 
 Eigenpairs of $\matr A$ are $\left(
 \sqrt{a^2+b^2},
 \begin{bmatrix}
@@ -190,11 +190,11 @@ Since all the eigenvalues are distinct, $\matr A$ is diagonizable. \\ \\
 
 
 For eigenvalues of B, we have
-\begin{equation*}
+\begin{equation}
 	|\matr B - \lambda \matr I| = 0
-\end{equation*}
+\end{equation}
 with
-\begin{align*}
+\begin{align}
 	            &             
 	\begin{bmatrix}
 	a           & -b          \\
@@ -210,22 +210,22 @@ with
 	a - \lambda & - b         \\
 	b           & a - \lambda \\
 	\end{bmatrix}
-\end{align*}
+\end{align}
 hence
-\begin{align*}
+\begin{align}
 	b^2 + \left(a-\lambda\right)^2 & = 0         \\
 	\left(a-\lambda\right)^2       & = -b^2      \\
 	a-\lambda                      & = \pm b i   \\
 	\lambda                        & = a \pm b i 
-\end{align*}
+\end{align}
 
 
 For eigenvalue $a+bi$ and eigenvector $u_1$ for $\matr B$, we have
-\begin{align*}
+\begin{align}
 	\left[\matr B - \left(a+bi\right) \matr I \right] u_1 &= 0 \\
 	b \left[\begin{matrix}i & -1 \\1 & i\end{matrix}\right] u_1&=0 \\
-\end{align*}
-\begin{align*}
+\end{align}
+\begin{align}
 	\begin{bmatrix}[cc|c]
 	i          & -1           & 0 \\
 	1          & i            & 0 \\
@@ -251,17 +251,17 @@ For eigenvalue $a+bi$ and eigenvector $u_1$ for $\matr B$, we have
 	0          & 0            & 0 \\
 	\end{bmatrix} \\
 	\therefore u_1 = \begin{bmatrix}1 \\ -i \end{bmatrix}
-\end{align*}
+\end{align}
 
 For eigenvalue $a-bi$ and eigenvector $u_2$ for $\matr B$, we have
-\begin{align*}
+\begin{align}
 	\left[\matr B - \left(a-bi\right) \matr I \right] u_2 &= 0 \\
 	b \left[\begin{matrix}-i & -1 \\1 & -i\end{matrix}\right] u_2&=0 \\
-\end{align*}
+\end{align}
 Using similar method from above, we will have
-\begin{equation*}
+\begin{equation}
 	u_2 = \begin{bmatrix}-1 \\ i \end{bmatrix}
-\end{equation*}
+\end{equation}
 Eigenpairs of $\matr B$ are $\left(
 a+bi,
 \begin{bmatrix}1 \\ -i \end{bmatrix}
@@ -274,38 +274,51 @@ Since all the eigenvalues are distinct, $\matr B$ is diagonizable. \\ \\
 \begin{answer}{Q. 2}
 \end{answer}
 Let $\matr A$ be 
-\begin{equation*}
+\begin{equation}
 	\left[\begin{matrix}x_{1} & x_{2} & x_{3}\\x_{4} & x_{5} & x_{6}\\x_{7} & x_{8} & x_{9}\end{matrix}\right]
-\end{equation*}
+\end{equation}
 then considering that 
 \begin{align} 
 	(A-\lambda_1)\matr v_1 & =0 \\
 	(A-\lambda_2)\matr v_2 & =0 
 \end{align}
 hence
-\begin{align*} 
+\begin{align} 
 	\left[\begin{matrix}x_{1} - x_{2} - 1   \\x_{4} - x_{5} + 1\\x_{7} - x_{8}\end{matrix}\right] &= 0 \\
 	\left[\begin{matrix}2 x_{1} + x_{3} + 2 \\2 x_{4} + x_{6}\\2 x_{7} + x_{9} + 1\end{matrix}\right] &= 0
-\end{align*}
+\end{align}
 by solving 
-\begin{align*}
+\begin{align}
 	x_1-x_2    & =1   \\
 	2x_1+x_3   & = -2 \\ \\
 	x_4-x_5    & = -1 \\
 	2x_4 + x_6 & = 0  \\ \\
 	x_7-x_8    & = 0  \\
 	2x_7+x_9   & = -1 
-\end{align*}
+\end{align}
 we have
-\begin{equation*}
+\begin{equation}
 	\left ( - \frac{x_{3}}{2} - 1, \quad - \frac{x_{3}}{2} - 2, \quad x_{3}, \quad - \frac{x_{6}}{2}, \quad - \frac{x_{6}}{2} + 1, \quad x_{6}, \quad - \frac{x_{9}}{2} - \frac{1}{2}, \quad - \frac{x_{9}}{2} - \frac{1}{2}, \quad x_{9}\right )
-\end{equation*}
+\end{equation}
 hence we can express $\matr A$ as
-\begin{equation*}
-\left[\begin{matrix}- \frac{x_{3}}{2} - 1 & - \frac{x_{3}}{2} - 2 & x_{3}\\- \frac{x_{6}}{2} & - \frac{x_{6}}{2} + 1 & x_{6}\\- \frac{x_{9}}{2} - \frac{1}{2} & - \frac{x_{9}}{2} - \frac{1}{2} & x_{9}\end{matrix}\right]
-\end{equation*}
-Since any values of $x_3,x_6$ and $x_9$ will meet the condition (1) and (2)
-	% --------------------------------------------------------------
+\begin{equation}
+	\left[\begin{matrix}- \frac{x_{3}}{2} - 1 & - \frac{x_{3}}{2} - 2 & x_{3}\\- \frac{x_{6}}{2} & - \frac{x_{6}}{2} + 1 & x_{6}\\- \frac{x_{9}}{2} - \frac{1}{2} & - \frac{x_{9}}{2} - \frac{1}{2} & x_{9}\end{matrix}\right]
+\end{equation}
+Since any values of $x_3,x_6$ and $x_9$ will meet the condition (48) and (49), \\
+hence we can put $x_3=2, x_6=2$ and $x_9=2$, getting
+\begin{equation}
+	\matr A = \left[\begin{matrix}-2 & -3 & 2\\-1 & 0 & 2\\- \frac{3}{2} & - \frac{3}{2} & 2\end{matrix}\right]
+\end{equation}
+\begin{align}
+	\matr A-\lambda \matr I  = & \left[\begin{matrix}- \lambda - 2 & -3 & 2\\-1 & - \lambda & 2\\- \frac{3}{2} & - \frac{3}{2} & - \lambda + 2\end{matrix}\right] \\
+	|\matr A - \lambda \matr I|=& - \lambda \left(- \lambda - 2\right) \left(- \lambda + 2\right) - 3 \lambda \\
+	=&-\lambda(\lambda-1)(\lambda+1)
+\end{align}
+hence with $|\matr A - \lambda \matr I|=0$, we can know that the third eigenvalue is $0$ \\ \\
+For eigenvalue $0$ and eigenvector $v_23$ for $\matr A$, we have
+
+
+% --------------------------------------------------------------
 %     You don't have to mess with anything below this line.
 % --------------------------------------------------------------
 \end{document}
