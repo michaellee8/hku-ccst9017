@@ -195,7 +195,7 @@ For eigenvalues of B, we have
 \end{equation*}
 with
 \begin{align*}
-	            &              
+	            &             
 	\begin{bmatrix}
 	a           & -b          \\
 	b           & a           \\ 
@@ -263,15 +263,49 @@ Using similar method from above, we will have
 	u_2 = \begin{bmatrix}-1 \\ i \end{bmatrix}
 \end{equation*}
 Eigenpairs of $\matr B$ are $\left(
-	a+bi,
+a+bi,
 \begin{bmatrix}1 \\ -i \end{bmatrix}
 \right)$ and $\left(
-	a-bi,
+a-bi,
 \begin{bmatrix}-1 \\ i \end{bmatrix}
 \right)$\\ 
-Since all the eigenvalues are distinct, $\matr B$ is diagonizable. \\
-% --------------------------------------------------------------
+Since all the eigenvalues are distinct, $\matr B$ is diagonizable. \\ \\
+
+\begin{answer}{Q. 2}
+\end{answer}
+Let $\matr A$ be 
+\begin{equation*}
+	\left[\begin{matrix}x_{1} & x_{2} & x_{3}\\x_{4} & x_{5} & x_{6}\\x_{7} & x_{8} & x_{9}\end{matrix}\right]
+\end{equation*}
+then considering that 
+\begin{align} 
+	(A-\lambda_1)\matr v_1 & =0 \\
+	(A-\lambda_2)\matr v_2 & =0 
+\end{align}
+hence
+\begin{align*} 
+	\left[\begin{matrix}x_{1} - x_{2} - 1   \\x_{4} - x_{5} + 1\\x_{7} - x_{8}\end{matrix}\right] &= 0 \\
+	\left[\begin{matrix}2 x_{1} + x_{3} + 2 \\2 x_{4} + x_{6}\\2 x_{7} + x_{9} + 1\end{matrix}\right] &= 0
+\end{align*}
+by solving 
+\begin{align*}
+	x_1-x_2    & =1   \\
+	2x_1+x_3   & = -2 \\ \\
+	x_4-x_5    & = -1 \\
+	2x_4 + x_6 & = 0  \\ \\
+	x_7-x_8    & = 0  \\
+	2x_7+x_9   & = -1 
+\end{align*}
+we have
+\begin{equation*}
+	\left ( - \frac{x_{3}}{2} - 1, \quad - \frac{x_{3}}{2} - 2, \quad x_{3}, \quad - \frac{x_{6}}{2}, \quad - \frac{x_{6}}{2} + 1, \quad x_{6}, \quad - \frac{x_{9}}{2} - \frac{1}{2}, \quad - \frac{x_{9}}{2} - \frac{1}{2}, \quad x_{9}\right )
+\end{equation*}
+hence we can express $\matr A$ as
+\begin{equation*}
+\left[\begin{matrix}- \frac{x_{3}}{2} - 1 & - \frac{x_{3}}{2} - 2 & x_{3}\\- \frac{x_{6}}{2} & - \frac{x_{6}}{2} + 1 & x_{6}\\- \frac{x_{9}}{2} - \frac{1}{2} & - \frac{x_{9}}{2} - \frac{1}{2} & x_{9}\end{matrix}\right]
+\end{equation*}
+Since any values of $x_3,x_6$ and $x_9$ will meet the condition (1) and (2)
+	% --------------------------------------------------------------
 %     You don't have to mess with anything below this line.
 % --------------------------------------------------------------
-    
 \end{document}
