@@ -6,7 +6,7 @@
 
 \documentclass[12pt]{article}
     \usepackage[margin=1in]{geometry} 
-	\usepackage{amsmath,amsthm,amssymb}
+	\usepackage{amsmath,amsthm,amssymb,bm}
 	\makeatletter
 \renewcommand*\env@matrix[1][*\c@MaxMatrixCols c]{%
   \hskip -\arraycolsep
@@ -16,7 +16,7 @@
      
     \newcommand{\N}{\mathbb{N}}
     \newcommand{\Z}{\mathbb{Z}}
-    \newcommand{\matr}[1]{\mathbf{#1}}
+    \newcommand{\matr}[1]{\bm{#1}}
     \newenvironment{theorem}[2][Theorem]{\begin{trivlist}
     \item[\hskip \labelsep {\bfseries #1}\hskip \labelsep {\bfseries #2.}]}{\end{trivlist}}
     \newenvironment{lemma}[2][Lemma]{\begin{trivlist}
@@ -385,7 +385,7 @@ Considering that the eigenvector $\matr v_i$ of matrix $\matr A$ with eigenvalue
 \begin{equation}
 	\left(\matr A - \lambda_i \matr I \right)\matr v_i = 0 
 \end{equation}
-and a vector $\matr v$ is considered a null space vector only if
+and a vector $\matr v$ is considered a null space vector of $\matr A$ only if
 \begin{equation}
 	\matr A \matr v = 0
 \end{equation}
@@ -398,24 +398,20 @@ $\therefore$ $\matr A$ has a nullspace vector $v_i$ if it has a eigenvalue of $\
 
 If there is no such $\lambda_i=0$, then for all $\matr v_i$
 \begin{equation}
-	\matr A \matr v_i &= \lambda_i \matr v _i \neq 0
+	\matr A \matr v_i = \lambda_i \matr v _i \neq 0
 \end{equation}
 $\therefore$ By (86), no null space vector exists. \\
-$\therefore$ $\matr A$ has a nullspace vector $v_i$ only if it has a eigenvalue of $\lambda _i=0$ \\\\
+$\therefore$ $\matr A$ has a null space vector $v_i$ only if it has a eigenvalue of $\lambda _i=0$ \\\\
 $\because$ $p(\lambda)$ is of degree 6 \\
 $\therefore$ $\matr A$ has a size of $6\times 6$ \\ \\
-Consider a matrix $\matr M$ with size $n\times n$, but a rank $r<n$ \\
-its row-echelon form must consists of at least $1$ zero row, say:
+By rank\textendash nullity theorem,
 \begin{equation}
-	\begin{bmatrix}
-		\matr M_{1,1} & \matr M_{1,2} & \matr M_{1,3} & \hdots & \matr M_{1,n} \\
-		\matr M_{2,1} & \matr M_{2,2} & \matr M_{2,3} & \hdots & \matr M_{2,n} \\
-		\matr M_{3,1} & \matr M_{3,2} & \matr M_{3,3} & \hdots & \matr M_{3,n} \\
-		\vdots        & \vdots        & \vdots        & \ddots & \vdots        \\
-		0             & 0             & 0             & \hdots & 0             
-	\end{bmatrix}
+    \textrm{Rank}(\matr A) + \textrm{Nullity}(\matr A) = \textrm{dim} \matr A
 \end{equation}
-
+$\because$ No solution of $p(\lambda)=0$ is 0 \\
+$\therefore$ By the above proved statement, $A$ have no null space vector \\
+$\therefore$ $\textrm{Nullity}(\matr A)=0$ \\
+$\therefore$ By (90), rank of $\matr A$ is given by $\textrm{Rank}(\matr A) = \textrm{dim} \matr A = 0$
 % --------------------------------------------------------------
 %     You don't have to mess with anything below this line.
 % --------------------------------------------------------------
