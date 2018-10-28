@@ -271,116 +271,43 @@ a-bi,
 \right)$\\ 
 Since all the eigenvalues are distinct, $\matr B$ is diagonizable. \\ \\
 
-\begin{answer}{Q. 2}
-\end{answer}
-Let $\matr A$ be 
-\begin{equation}
-	\left[\begin{matrix}x_{1} & x_{2} & x_{3}\\x_{4} & x_{5} & x_{6}\\x_{7} & x_{8} & x_{9}\end{matrix}\right]
-\end{equation}
-then considering that 
-\begin{align} 
-	(A-\lambda_1)\matr v_1 & =0 \\
-	(A-\lambda_2)\matr v_2 & =0 
-\end{align}
-hence
-\begin{align} 
-	\left[\begin{matrix}x_{1} - x_{2} - 1   \\x_{4} - x_{5} + 1\\x_{7} - x_{8}\end{matrix}\right] &= 0 \\
-	\left[\begin{matrix}2 x_{1} + x_{3} + 2 \\2 x_{4} + x_{6}\\2 x_{7} + x_{9} + 1\end{matrix}\right] &= 0
-\end{align}
-by solving 
+\begin{answer}{Q. 2}\end{answer}
+Let $\matr v$ be the vector provided, consider that
 \begin{align}
-	x_1-x_2    & =1   \\
-	2x_1+x_3   & = -2 \\ \\
-	x_4-x_5    & = -1 \\
-	2x_4 + x_6 & = 0  \\ \\
-	x_7-x_8    & = 0  \\
-	2x_7+x_9   & = -1 
+    \matr v =& \begin{bmatrix}
+    4 \\ 2 \\3
+    \end{bmatrix} \\
+    =& -2 \begin{bmatrix}
+    1 \\ -1 \\ 0
+    \end{bmatrix}
+    +3 \begin{bmatrix}
+    2 \\ 0 \\ 1
+    \end{bmatrix} \\
+    =& -2 \matr v_1 + 3 \matr v_2
 \end{align}
-we have
-\begin{equation}
-	\left ( - \frac{x_{3}}{2} - 1, \quad - \frac{x_{3}}{2} - 2, \quad x_{3}, \quad - \frac{x_{6}}{2}, \quad - \frac{x_{6}}{2} + 1, \quad x_{6}, \quad - \frac{x_{9}}{2} - \frac{1}{2}, \quad - \frac{x_{9}}{2} - \frac{1}{2}, \quad x_{9}\right )
-\end{equation}
-hence we can express $\matr A$ as
-\begin{equation}
-	\left[\begin{matrix}- \frac{x_{3}}{2} - 1 & - \frac{x_{3}}{2} - 2 & x_{3}\\- \frac{x_{6}}{2} & - \frac{x_{6}}{2} + 1 & x_{6}\\- \frac{x_{9}}{2} - \frac{1}{2} & - \frac{x_{9}}{2} - \frac{1}{2} & x_{9}\end{matrix}\right]
-\end{equation}
-Since any values of $x_3,x_6$ and $x_9$ will meet the condition (48) and (49), \\
-hence we can put $x_3=2, x_6=2$ and $x_9=2$, getting
-\begin{equation}
-	\matr A = \left[\begin{matrix}-2 & -3 & 2\\-1 & 0 & 2\\- \frac{3}{2} & - \frac{3}{2} & 2\end{matrix}\right]
-\end{equation}
+Hence we have
 \begin{align}
-	\matr A-\lambda \matr I  = & \left[\begin{matrix}- \lambda - 2 & -3 & 2 \\-1 & - \lambda & 2\\- \frac{3}{2} & - \frac{3}{2} & - \lambda + 2\end{matrix}\right] \\
-	|\matr A - \lambda \matr I|=& - \lambda \left(- \lambda - 2\right) \left(- \lambda + 2\right) - 3 \lambda \\
-	=&-\lambda(\lambda-1)(\lambda+1)
-\end{align}
-hence with $|\matr A - \lambda \matr I|=0$, we can know that the third eigenvalue is $0$ \\ \\
-For eigenvalue $0$ and eigenvectors $v_3$ for $\matr A$, we have
-\begin{align}
-	\left(A-0\matr I \right) v_3 &= 0 \\
-	\left[\begin{matrix}-2 & -3 & 2 \\-1 & 0 & 2\\- \frac{3}{2} & - \frac{3}{2} & 2\end{matrix}\right] v_3 &= 0 
-\end{align}
-hence by solving linear equation
-\begin{equation}
-	\begin{bmatrix}[ccc|c]
-		-2 & -3 & 2 & 0 \\-1 & 0 & 2 & 0\\- \frac{3}{2} & - \frac{3}{2} & 2 & 0
-	\end{bmatrix}
-\end{equation}
-we have 
-\begin{equation}
-	v_3 = k \begin{bmatrix}
-	2 \\ -\frac 2 3 \\ 1
-	\end{bmatrix}
-\end{equation}
-Taking $v_3 = \begin{bmatrix}
-6 \\ -2 \\ 3
-\end{bmatrix} $  for simplicity\\
-Therefore, we can digaonize $\matr A$ as
-\begin{align}
-	\matr V =& \begin{bmatrix}v_1 v_3 v_2\end{bmatrix} \\
-	=               & \left[\begin{matrix}2              & 6  & -1 \\0 & -2 & 1\\1 & 3 & 0\end{matrix}\right] \\
-	\matr D =       & \left[\begin{matrix}-1             & 0  & 0  \\0 & 0 & 0\\0 & 0 & 1\end{matrix}\right] \\
-	|\matr V|=&-2
-	\begin{bmatrix}
-	2 & -1 \\
-	1 & 0
-	\end{bmatrix}
-	-1
-	\begin{bmatrix}
-	2 & 6 \\
-	1 & 3
-	\end{bmatrix} \\
-	=& -2 - 1 (0) \\
-	=& -2 \\
-	\textrm{cof} (\matr V) =& 
-	\begin{bmatrix}
-	-3 & 1 & 2 \\
-	- 3 & 1 & 0 \\
-	4 & -2 &  -4 
-	\end{bmatrix} \\
-	\textrm{adj}(\matr V) =& \textrm{coj}(\matr V) ^ T \\
-	=               & \left[\begin{matrix}-3             & -3 & 4  \\1 & 1 & -2\\2 & 0 & -4\end{matrix}\right] \\
-	\matr V ^{-1} = & - \frac 1 2 \left[\begin{matrix}-3 & -3 & 4  \\1 & 1 & -2\\2 & 0 & -4\end{matrix}\right] 
-\end{align}
-With
-\begin{equation}
-	\matr V^{-1} \matr A \matr V = \matr D \\
-\end{equation}
-\begin{align}
-	\matr V ^{-1} \matr A ^ {999} \matr V =& \matr D^{999} \\
-	\matr A ^ {999} \begin{bmatrix}4\\2\\3\end{bmatrix}=& \matr V \matr D ^ {999} \matr V ^ {-1}\begin{bmatrix}4\\2\\3\end{bmatrix} \\
-	= & \left[\begin{matrix}2  & 6  & -1 \\0 & -2 & 1\\1 & 3 & 0\end{matrix}\right]
-	\left[\begin{matrix}-1^{999} & 0 & 0\\0 & 0 & 0\\0 & 0 & 1^{999}\end{matrix}\right]
-	\left[\begin{matrix}\frac{3}{2} & \frac{3}{2} & -2\\- \frac{1}{2} & - \frac{1}{2} & 1\\-1 & 0 & 2\end{matrix}\right]
-	\left[\begin{matrix}4\\2\\3\end{matrix}\right] \\
-	= & \left[\begin{matrix}-2 & 0  & -1 \\0 & 0 & 1\\-1 & 0 & 0\end{matrix}\right]
-	\left[\begin{matrix}\frac{3}{2} & \frac{3}{2} & -2\\- \frac{1}{2} & - \frac{1}{2} & 1\\-1 & 0 & 2\end{matrix}\right]
-	\left[\begin{matrix}4\\2\\3\end{matrix}\right] \\
-	= & \left[\begin{matrix}-2 & -3 & 2  \\-1 & 0 & 2\\- \frac{3}{2} & - \frac{3}{2} & 2\end{matrix}\right]	\left[\begin{matrix}4\\2\\3\end{matrix}\right] \\
-	=&\left[\begin{matrix}-8\\2\\-3\end{matrix}\right]
+   & \matr A ^{999} \begin{bmatrix}
+    4 \\ 2 \\3
+    \end{bmatrix} \\
+    =& \matr A^ {999} \matr v \\
+    =&-2\matr A ^{999} \matr v_1 + 3 \matr A^{999} \matr v_2 \\
+    =& -2 \lambda _1 ^{999}\matr v _1 + 3 \lambda _2^{999} \matr v_2 \\
+    =& -2 1 ^{999}\matr v _1 + 3 (-1)^{999} \matr v_2 \\
+    =& -2 \matr v _1 -3 \matr v _2 \\
+    =& -2 \begin{bmatrix}
+    1 \\ -1 \\ 0
+    \end{bmatrix} -3 \begin{bmatrix}
+    2 \\ 0 \\1
+    \end{bmatrix} \\
+    =&\begin{bmatrix}
+    -8 \\ 2 \\ -3
+    \end{bmatrix}
 \end{align}
 
-\begin{question}{Q. 3}\end{question}
+
+
+\begin{answer}{Q. 3}\end{answer}
 Considering that the eigenvector $\matr v_i$ of matrix $\matr A$ with eigenvalue $\matr v_i$ is given by
 \begin{equation}
 	\left(\matr A - \lambda_i \matr I \right)\matr v_i = 0 
@@ -411,7 +338,74 @@ By rank\textendash nullity theorem,
 $\because$ No solution of $p(\lambda)=0$ is 0 \\
 $\therefore$ By the above proved statement, $A$ have no null space vector \\
 $\therefore$ $\textrm{Nullity}(\matr A)=0$ \\
-$\therefore$ By (90), rank of $\matr A$ is given by $\textrm{Rank}(\matr A) = \textrm{dim} \matr A = 0$
+$\therefore$ By (90), rank of $\matr A$ is given by $\textrm{Rank}(\matr A) = \textrm{dim} \matr A = 0$ \\ \\
+
+\begin{answer}{Q. 4}\end{answer}
+Let $\matr M$ be the matrix, hence
+\begin{align}
+    |\matr M - \lambda \matr I| =&  
+    \begin{bmatrix}
+    -\lambda & 0 & 0 & 0 \\
+    1 & 2- \lambda & 3 & 4 \\
+    0 & 0 & -\lambda & 0 \\
+    1 & 2 & 3 & 4-\lambda
+    \end{bmatrix} \\
+    =&\lambda ^2((2-\lambda)(4-\lambda)-8) \\ 
+    =& \lambda ^3(\lambda -6)
+\end{align}
+Hence by solving $\lambda ^3 (\lambda -6)=0$, \\
+we have eigenvalue $0$ of algebraic multiplicity 3 \\
+and eigenvalue $6$ of algebraic multiplicity 1. \\ \\
+For $\lambda = 0$,
+\begin{align}
+    \begin{bmatrix}[cccc|c]
+    0 & 0 & 0 & 0& 0 \\
+    1 & 2 & 3 & 4& 0 \\
+    0 & 0 & 0 & 0& 0 \\
+    1 & 2 & 3 & 4& 0
+    \end{bmatrix} \\
+    \begin{bmatrix}[cccc|c]
+    1 & 2 & 3 & 4& 0 \\
+    0 & 0 & 0 & 0& 0 \\
+    0 & 0 & 0 & 0& 0 \\
+    0 & 0 & 0 & 0& 0 \\
+    \end{bmatrix} 
+\end{align}
+Hence eigenvectors of 0 are
+\begin{equation}
+    \left [ \left[\begin{matrix}-2\\1\\0\\0\end{matrix}\right], \quad \left[\begin{matrix}-3\\0\\1\\0\end{matrix}\right], \quad \left[\begin{matrix}-4\\0\\0\\1\end{matrix}\right]\right ]
+\end{equation} 
+Which mean it has linear multiplicity of 3\\ \\
+For $\lambda=6$, \\
+For a eigenvalue of algebraic multiplicity 1, its linear multiplicity must be larger than 0, since at least 1 eigenvectors exists, and its eigenvalue must be equal or smaller than 1, since linear multiplicity must be smaller or equal to algebraic multiplicity. Hence its linear multiplicity is 1 as well.
+
+\begin{answer}{Q. 5}\end{answer}
+Let $\matr v = \begin{bmatrix}
+a_1 \\ a_2 \\ \vdots \\ a_n
+\end{bmatrix}$
+Then we have
+\begin{align}
+    \matr v \matr v ^T =&\begin{bmatrix}
+a_1 \\ a_2 \\ \vdots \\ a_n
+\end{bmatrix} \begin{bmatrix}
+a_1 & a_2 & \hdots & a_n
+\end{bmatrix} \\
+=&\begin{bmatrix}
+a_1^2 & a_1  a_2 & \hdots & a_1 a^ n \\
+a_2 a_1 &   a_2^2 & \hdots & a_2 a^ n \\
+\vdots & \vdots & \ddots & \vdots \\
+a_n a_1 & a_n a_2 & \hdots & a_n^2
+\end{bmatrix}
+\end{align}
+Therefore $\matr v \matr v ^T$, hence $-\frac 2 {||v||^2} \matr v \matr v ^T$ are symmetric. \\
+Since $\matr I$ is symmetric as well, \\
+$\matr M = \matr I -\frac 2 {||v||^2} \matr v \matr v ^T $ is also symmetric. \\ \\
+\begin{align}
+    \matr M^2 =& (\matr I -\frac 2 {||\matr v||^2} \matr v \matr v ^T)^2 \\
+    =& \matr I - 4 \frac {\matr v \matr v ^T}{||v||^2} + 4 \frac 1 {||\matr v||^4} \matr v (||\matr v||^2) \matr v ^T \\
+    =& \matr I \\
+    \matr M =& \matr M ^{-1}
+\end{align}
 % --------------------------------------------------------------
 %     You don't have to mess with anything below this line.
 % --------------------------------------------------------------
