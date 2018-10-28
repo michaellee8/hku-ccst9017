@@ -1,0 +1,86 @@
+% --------------------------------------------------------------
+% This is all preamble stuff that you don't have to worry about.
+% Head down to where it says "Start here"
+% --------------------------------------------------------------
+ 
+\documentclass[12pt]{article}
+ 
+    \usepackage[margin=1in]{geometry} 
+    \usepackage{amsmath,amsthm,amssymb}
+     
+    \newcommand{\N}{\mathbb{N}}
+    \newcommand{\Z}{\mathbb{Z}}
+     
+    \newenvironment{theorem}[2][Theorem]{\begin{trivlist}
+    \item[\hskip \labelsep {\bfseries #1}\hskip \labelsep {\bfseries #2.}]}{\end{trivlist}}
+    \newenvironment{lemma}[2][Lemma]{\begin{trivlist}
+    \item[\hskip \labelsep {\bfseries #1}\hskip \labelsep {\bfseries #2.}]}{\end{trivlist}}
+    \newenvironment{exercise}[2][Exercise]{\begin{trivlist}
+    \item[\hskip \labelsep {\bfseries #1}\hskip \labelsep {\bfseries #2.}]}{\end{trivlist}}
+    \newenvironment{reflection}[2][Reflection]{\begin{trivlist}
+    \item[\hskip \labelsep {\bfseries #1}\hskip \labelsep {\bfseries #2.}]}{\end{trivlist}}
+    \newenvironment{proposition}[2][Proposition]{\begin{trivlist}
+    \item[\hskip \labelsep {\bfseries #1}\hskip \labelsep {\bfseries #2.}]}{\end{trivlist}}
+    \newenvironment{corollary}[2][Corollary]{\begin{trivlist}
+    \item[\hskip \labelsep {\bfseries #1}\hskip \labelsep {\bfseries #2.}]}{\end{trivlist}}
+    \newenvironment{question}[2][Question]{\begin{trivlist}
+    \item[\hskip \labelsep {\bfseries #1}\hskip \labelsep {\bfseries #2.}]}{\end{trivlist}}
+    \newenvironment{answer}[2][Answer]{\begin{trivlist}
+    \item[\hskip \labelsep {\bfseries #1}\hskip \labelsep {\bfseries #2.}]}{\end{trivlist}}
+    
+     
+\begin{document}
+
+% --------------------------------------------------------------
+%                         Start here
+% --------------------------------------------------------------
+
+%\renewcommand{\qedsymbol}{\filledbox}
+
+\title{Assignment 7}%replace X with the appropriate number
+\author{Michael Lee\\ %replace with your name
+	CCST9017 - Hidden Order in Daily Life: A Mathematical Perspective \\
+	University Number 3035569110 \\
+	Tutorial Group 009
+} %if necessary, replace with your course title
+
+
+\maketitle
+
+\begin{question}{Q. 1}
+	"Flush" in card game
+\end{question}
+\begin{answer}{Q. 1}\end{answer}
+Consider if you discard the 2 clubs, then only the 3 hearts remain. Therefore, the only possible flush is a hearts flush consists of 5 hearts. \\
+Hence the possibility of getting a flush is equal to that of getting 2 hearts from the remaining 47 cards, which is given by:
+\begin{equation}
+	10/47 \times 9/46 = 0.0416
+\end{equation}
+
+\begin{question}{Q. 2}
+	Birthday problem
+\end{question}
+\begin{answer}{Q. 2}\end{answer}
+Let such probability be $P$, number of required people be $n$.  \\
+Consider the birthday of such person $i$ be $D_i$, where $1\leq D_i \leq 365$  \\
+Let's specify the "specific person" to be the first one, hence having birthday $D_1$  \\
+For $D_2, D_3 , \dots , D_n \neq D_1$ not equal to $D_1$, there are $365-1$ choices out of $365$ days  \\
+The possibility of $D_2, D_3 , \dots , D_n \neq D_1$ should hence be given by:
+\begin{equation}
+    \left(\frac{364}{365}\right)^{n - 1}
+\end{equation}
+Hence the possibility of any one of $D_2, D_3 , \dots , D_n$ is equal to $D_1$, which is $P$, is given by:  
+\begin{equation}
+    1-\left(\frac{364}{365}\right)^{n - 1}
+\end{equation}
+By solving $P>0.5$, we have
+\begin{equation}
+    n > 253.652
+\end{equation}
+Hence the minimum $n$ is $254$
+
+% --------------------------------------------------------------
+%     You don't have to mess with anything below this line.
+% --------------------------------------------------------------
+
+\end{document}
