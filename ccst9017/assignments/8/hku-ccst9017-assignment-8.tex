@@ -1,0 +1,97 @@
+% --------------------------------------------------------------
+% This is all preamble stuff that you don't have to worry about.
+% Head down to where it says "Start here"
+% --------------------------------------------------------------
+ 
+\documentclass[12pt]{article}
+ 
+    \usepackage[margin=1in]{geometry} 
+    \usepackage{amsmath,amsthm,amssymb}
+     
+    \newcommand{\N}{\mathbb{N}}
+    \newcommand{\Z}{\mathbb{Z}}
+     
+    \newenvironment{theorem}[2][Theorem]{\begin{trivlist}
+    \item[\hskip \labelsep {\bfseries #1}\hskip \labelsep {\bfseries #2.}]}{\end{trivlist}}
+    \newenvironment{lemma}[2][Lemma]{\begin{trivlist}
+    \item[\hskip \labelsep {\bfseries #1}\hskip \labelsep {\bfseries #2.}]}{\end{trivlist}}
+    \newenvironment{exercise}[2][Exercise]{\begin{trivlist}
+    \item[\hskip \labelsep {\bfseries #1}\hskip \labelsep {\bfseries #2.}]}{\end{trivlist}}
+    \newenvironment{reflection}[2][Reflection]{\begin{trivlist}
+    \item[\hskip \labelsep {\bfseries #1}\hskip \labelsep {\bfseries #2.}]}{\end{trivlist}}
+    \newenvironment{proposition}[2][Proposition]{\begin{trivlist}
+    \item[\hskip \labelsep {\bfseries #1}\hskip \labelsep {\bfseries #2.}]}{\end{trivlist}}
+    \newenvironment{corollary}[2][Corollary]{\begin{trivlist}
+    \item[\hskip \labelsep {\bfseries #1}\hskip \labelsep {\bfseries #2.}]}{\end{trivlist}}
+    \newenvironment{question}[2][Question]{\begin{trivlist}
+    \item[\hskip \labelsep {\bfseries #1}\hskip \labelsep {\bfseries #2.}]}{\end{trivlist}}
+    \newenvironment{answer}[2][Answer]{\begin{trivlist}
+    \item[\hskip \labelsep {\bfseries #1}\hskip \labelsep {\bfseries #2.}]}{\end{trivlist}}
+    
+     
+\begin{document}
+
+% --------------------------------------------------------------
+%                         Start here
+% --------------------------------------------------------------
+
+%\renewcommand{\qedsymbol}{\filledbox}
+
+\title{Assignment 8}%replace X with the appropriate number
+\author{Michael Lee\\ %replace with your name
+	CCST9017 - Hidden Order in Daily Life: A Mathematical Perspective \\
+	University Number 3035569110 \\
+	Tutorial Group 009
+} %if necessary, replace with your course title
+
+
+\maketitle
+
+\begin{question}{Q. 1}
+	Please find the total number of errors (typos) in the book.
+\end{question}
+\begin{answer}{Q. 1}
+	\hfill \break
+	Let $N$ be the total number of typos int the book. \\
+	Let those errors considered marked to be II's. \\
+	Then by considering marked items, we have:
+	\begin{align}
+		15/30 & = 25/N \\
+		N     & = 50
+	\end{align}
+	Hence total number of typos is 50.
+\end{answer}
+
+\begin{question}{Q. 2}
+	Heuristic Reason for Benford’s Law
+\end{question}
+\begin{answer}{Q. 2}
+	\hfill \break
+	Considering that
+	\begin{equation}
+		100d(1+r\%)^{f(d)}=100(d+1)
+	\end{equation}
+	For $d$ is a interger between 1 to 9. \\
+	We have
+	\begin{align}
+		d(1+r\%)^{f(d)} & =(d+1)                       \\
+		(1+r\%)^{f(d)}  & =1+1/d                       \\
+		f(d)            & = \log (1+1/d) / \log(1+r\%)
+	\end{align}
+	The total time $F$ for all digit changes is given by
+	\begin{align}
+		F & = \sum_{n=d}^9 f(d)                                    \\
+		  & = \left(\sum_{n=d}^9 \log (1+1/d)\right) / \log(1+r\%) \\
+		  & = \log 10 / \log (1+r\%)                               \\
+		  & = 1 / \log (1+r\%)
+	\end{align}
+	Hence
+	\begin{equation}
+		P(\textrm{first digit} = d) = f(d)/F = \log (1+1/d)
+	\end{equation}
+\end{answer}
+% --------------------------------------------------------------
+%     You don't have to mess with anything below this line.
+% --------------------------------------------------------------
+
+\end{document}
