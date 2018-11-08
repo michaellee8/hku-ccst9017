@@ -1,0 +1,108 @@
+% --------------------------------------------------------------
+% This is all preamble stuff that you don't have to worry about.
+% Head down to where it says "Start here"
+% --------------------------------------------------------------
+ 
+\documentclass[12pt]{article}
+ 
+    \usepackage[margin=1in]{geometry} 
+    \usepackage{amsmath,amsthm,amssymb}
+     
+    \newcommand{\N}{\mathbb{N}}
+    \newcommand{\Z}{\mathbb{Z}}
+     
+    \newenvironment{theorem}[2][Theorem]{\begin{trivlist}
+    \item[\hskip \labelsep {\bfseries #1}\hskip \labelsep {\bfseries #2.}]}{\end{trivlist}}
+    \newenvironment{lemma}[2][Lemma]{\begin{trivlist}
+    \item[\hskip \labelsep {\bfseries #1}\hskip \labelsep {\bfseries #2.}]}{\end{trivlist}}
+    \newenvironment{exercise}[2][Exercise]{\begin{trivlist}
+    \item[\hskip \labelsep {\bfseries #1}\hskip \labelsep {\bfseries #2.}]}{\end{trivlist}}
+    \newenvironment{reflection}[2][Reflection]{\begin{trivlist}
+    \item[\hskip \labelsep {\bfseries #1}\hskip \labelsep {\bfseries #2.}]}{\end{trivlist}}
+    \newenvironment{proposition}[2][Proposition]{\begin{trivlist}
+    \item[\hskip \labelsep {\bfseries #1}\hskip \labelsep {\bfseries #2.}]}{\end{trivlist}}
+    \newenvironment{corollary}[2][Corollary]{\begin{trivlist}
+    \item[\hskip \labelsep {\bfseries #1}\hskip \labelsep {\bfseries #2.}]}{\end{trivlist}}
+    \newenvironment{question}[2][Question]{\begin{trivlist}
+    \item[\hskip \labelsep {\bfseries #1}\hskip \labelsep {\bfseries #2.}]}{\end{trivlist}}
+    \newenvironment{answer}[2][Answer]{\begin{trivlist}
+    \item[\hskip \labelsep {\bfseries #1}\hskip \labelsep {\bfseries #2.}]}{\end{trivlist}}
+    
+     
+\begin{document}
+
+% --------------------------------------------------------------
+%                         Start here
+% --------------------------------------------------------------
+
+%\renewcommand{\qedsymbol}{\filledbox}
+
+\title{Assignment 9}%replace X with the appropriate number
+\author{Michael Lee\\ %replace with your name
+	CCST9017 - Hidden Order in Daily Life: A Mathematical Perspective \\
+	University Number 3035569110 \\
+	Tutorial Group 009
+} %if necessary, replace with your course title
+
+
+\maketitle
+
+\begin{question}{Q. 1}
+	Show that the 13-digit ISBN13 system (a) can detect all 1-errors, (b)
+	but not all 2-errors come from transposition of digits.
+\end{question}
+\begin{answer}{Q. 1}
+	\hfill \break
+	Let such ISBN13 code be $n=n_1 n_2 n_3 \hdots n_{13}$. \\
+	Let the error digit be $n_i$, which is mistakenly changed to $m_i$, where $n_i\neq m_i$\\
+	Let the new (error) value be $T$, and original (correct) value be $S$\\ \\
+	Consider case 1, $i$ is a odd number, \\
+	Then we have $T-S=1\times m_i -1 \times n_i = m_i-n_i$ \\
+	Since $0\leq m_i,n_i\leq 9$ and $m_i\neq n_i$, we must have $m_i-n_i \not\equiv 0 \pmod {10}$ \\ \\
+	Consider case 2, $i$ is a even number, \\
+	Then we have $T-S=3\times m_i - 3 \times n_i = 3\left(m_i-n_i\right)$ \\
+	Since $m_i-n_i \not\equiv 0 \pmod {10}$ and $3 \perp 10$, we must have $3\left(m_i-n_i\right) \not\equiv 0 \pmod {10}$ \\ \\
+	Because all ISBN13 code with 1-digit error will not satsify the detection condition,\\
+	Therefore ISBN13 can detect all 1-digit errors. \\ \\
+	Consider a transposition of 2-digits, $n_i$ and $n_{i+1}$, where \\
+	Consider case 1, $i$ is a odd number, \\
+	Then we have $T-S=\pm \left( 3 n_i+n_{i+1}-n_i-3n_{i+1}\right= \pm 2 \left( n_i-n_{i+1} \right)$
+\end{answer} 
+\begin{align*}
+x^2 + y^2 &= 1 \\
+y &= \sqrt{1 - x^2}
+\end{align*}
+
+\begin{question}{Q. 2}
+	Heuristic Reason for Benford’s Law
+\end{question}
+\begin{answer}{Q. 2}
+	\hfill \break
+	Considering that
+	\begin{equation}
+		100d(1+r\%)^{f(d)}=100(d+1)
+	\end{equation}
+	For $d$ is a interger between 1 to 9. \\
+	We have
+	\begin{align}
+		d(1+r\%)^{f(d)} & =(d+1)                       \\
+		(1+r\%)^{f(d)}  & =1+1/d                       \\
+		f(d)            & = \log (1+1/d) / \log(1+r\%)
+	\end{align}
+	The total time $F$ for all digit changes is given by
+	\begin{align}
+		F & = \sum_{n=d}^9 f(d)                                    \\
+		  & = \left(\sum_{n=d}^9 \log (1+1/d)\right) / \log(1+r\%) \\
+		  & = \log 10 / \log (1+r\%)                               \\
+		  & = 1 / \log (1+r\%)
+	\end{align}
+	Hence
+	\begin{equation}
+		P(\textrm{first digit} = d) = f(d)/F = \log (1+1/d)
+	\end{equation}
+\end{answer}
+% --------------------------------------------------------------
+%     You don't have to mess with anything below this line.
+% --------------------------------------------------------------
+
+\end{document}
