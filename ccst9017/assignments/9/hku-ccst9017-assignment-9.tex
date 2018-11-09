@@ -64,42 +64,22 @@
 	Since $m_i-n_i \not\equiv 0 \pmod {10}$ and $3 \perp 10$, we must have $3\left(m_i-n_i\right) \not\equiv 0 \pmod {10}$ \\ \\
 	Because all ISBN13 code with 1-digit error will not satsify the detection condition,\\
 	Therefore ISBN13 can detect all 1-digit errors. \\ \\
-	Consider a transposition of 2-digits, $n_i$ and $n_{i+1}$, where \\
-	Consider case 1, $i$ is a odd number, \\
-	Then we have $T-S=\pm \left( 3 n_i+n_{i+1}-n_i-3n_{i+1}\right= \pm 2 \left( n_i-n_{i+1} \right)$
-\end{answer} 
-\begin{align*}
-x^2 + y^2 &= 1 \\
-y &= \sqrt{1 - x^2}
-\end{align*}
+	Consider a transposition of 2-digits, $n_i$ and $n_{i+1}$, \\
+	Then we have $T-S=\pm \left( 3 n_i+n_{i+1}-n_i-3n_{i+1}\right)= \pm 2 \left( n_i-n_{i+1} \right)$ \\
+	Therfore, we have 1 example for it: 2770000000000 have the first and second digit swapped into 7270000000000. \\
+	The sum of first code is $2+7\times 3 + 7=30$, which is divisible by 10. \\
+	The sum of second code is $7+2\times 3+7=20$, which is also devisible by 10. \\
+	Therefore, it cannot check all 2-digit errors due to transposition.
+\end{answer}
 
 \begin{question}{Q. 2}
-	Heuristic Reason for Benford’s Law
+	Show that the codeword a cannot be a valid codeword.
 \end{question}
 \begin{answer}{Q. 2}
 	\hfill \break
-	Considering that
-	\begin{equation}
-		100d(1+r\%)^{f(d)}=100(d+1)
-	\end{equation}
-	For $d$ is a interger between 1 to 9. \\
-	We have
-	\begin{align}
-		d(1+r\%)^{f(d)} & =(d+1)                       \\
-		(1+r\%)^{f(d)}  & =1+1/d                       \\
-		f(d)            & = \log (1+1/d) / \log(1+r\%)
-	\end{align}
-	The total time $F$ for all digit changes is given by
-	\begin{align}
-		F & = \sum_{n=d}^9 f(d)                                    \\
-		  & = \left(\sum_{n=d}^9 \log (1+1/d)\right) / \log(1+r\%) \\
-		  & = \log 10 / \log (1+r\%)                               \\
-		  & = 1 / \log (1+r\%)
-	\end{align}
-	Hence
-	\begin{equation}
-		P(\textrm{first digit} = d) = f(d)/F = \log (1+1/d)
-	\end{equation}
+	According to the lecture notes, the minimum	distance of Hamming (7,4) code is 3. \\
+	Therefore, for any valid code $d$, there does not exists a valid code that have a distance less than 3. \\
+	Hence $a$, which only differs from $d$ by 2 bits, cannot be a valid one.
 \end{answer}
 % --------------------------------------------------------------
 %     You don't have to mess with anything below this line.
