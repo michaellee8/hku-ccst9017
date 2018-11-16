@@ -1,0 +1,95 @@
+% --------------------------------------------------------------
+% This is all preamble stuff that you don't have to worry about.
+% Head down to where it says "Start here"
+% --------------------------------------------------------------
+ 
+\documentclass[12pt]{article}
+ 
+    \usepackage[margin=1in]{geometry} 
+    \usepackage{amsmath,amsthm,amssymb}
+     
+    \newcommand{\N}{\mathbb{N}}
+    \newcommand{\Z}{\mathbb{Z}}
+     
+    \newenvironment{theorem}[2][Theorem]{\begin{trivlist}
+    \item[\hskip \labelsep {\bfseries #1}\hskip \labelsep {\bfseries #2.}]}{\end{trivlist}}
+    \newenvironment{lemma}[2][Lemma]{\begin{trivlist}
+    \item[\hskip \labelsep {\bfseries #1}\hskip \labelsep {\bfseries #2.}]}{\end{trivlist}}
+    \newenvironment{exercise}[2][Exercise]{\begin{trivlist}
+    \item[\hskip \labelsep {\bfseries #1}\hskip \labelsep {\bfseries #2.}]}{\end{trivlist}}
+    \newenvironment{reflection}[2][Reflection]{\begin{trivlist}
+    \item[\hskip \labelsep {\bfseries #1}\hskip \labelsep {\bfseries #2.}]}{\end{trivlist}}
+    \newenvironment{proposition}[2][Proposition]{\begin{trivlist}
+    \item[\hskip \labelsep {\bfseries #1}\hskip \labelsep {\bfseries #2.}]}{\end{trivlist}}
+    \newenvironment{corollary}[2][Corollary]{\begin{trivlist}
+    \item[\hskip \labelsep {\bfseries #1}\hskip \labelsep {\bfseries #2.}]}{\end{trivlist}}
+    \newenvironment{question}[2][Question]{\begin{trivlist}
+    \item[\hskip \labelsep {\bfseries #1}\hskip \labelsep {\bfseries #2.}]}{\end{trivlist}}
+    \newenvironment{answer}[2][Answer]{\begin{trivlist}
+    \item[\hskip \labelsep {\bfseries #1}\hskip \labelsep {\bfseries #2.}]}{\end{trivlist}}
+    
+     
+\begin{document}
+
+% --------------------------------------------------------------
+%                         Start here
+% --------------------------------------------------------------
+
+%\renewcommand{\qedsymbol}{\filledbox}
+
+\title{Assignment 10}%replace X with the appropriate number
+\author{Michael Lee\\ %replace with your name
+	CCST9017 - Hidden Order in Daily Life: A Mathematical Perspective \\
+	University Number 3035569110 \\
+	Tutorial Group 009
+} %if necessary, replace with your course title
+
+
+\maketitle
+
+\begin{question}{Q. 1}
+	Thoughts on PGP
+\end{question}
+\begin{answer}{Q. 1}
+    \hfill \par
+    I am totally agree with his statements. \par
+    The first reason is that privacy should be regarded as a basic human right.
+    No one should be allowed to ever infiltrate others' secrets by using any method,
+    even the government. We don't go naked out the street because of privacy,
+    We are not allowed to get inside others' home, even polices cannot, 
+    for the same reason. And this human right should be always regarded, no matter it
+    is a physical or electonical media, unless it is legal to steal things
+    on internet but robbing others' house remain a crime. \par
+    The second reason is handling privacy to total control of government is 
+    highly dengerous, both in a political and techincal sense. Techincal, a government
+    that stores tons of keys of citizen maybe a highly valuable target to hackers
+    , considering that most of the best hackers won't choose to work in government,
+    these keys will proably got stolen by those highly intelligent guys.
+    We can't put the stake of our privacy, which could mean business, into 
+    an unsafe situation. In a political sense, it is highly possible that governments
+    which holds the true power, use their ability without legal authorization,
+    or even use it for the leaders' own political good. How can we trust them?
+    Snowden has already expose that this is actually happening.
+\end{answer}
+
+\begin{question}{Q. 2}
+	Use Fermat’s little theorem to find the remainder when $2^{123}$ is divided by $29$. 
+\end{question}
+\begin{answer}{Q. 2}
+	\hfill \break
+    Since $29$ is a prime number, we have
+    $$ 2^{28} \equiv 1  \mod {29}$$
+    hence we have
+    \begin{align}
+        2^{123} &\equiv 2^{28\times 4 + 11} \mod 29 \\
+        2^{123} &\equiv (2^{28})^4  (2^{11}) \mod 29 \\
+        2^{123} &\equiv  2^{11} \mod 29 \\
+        2^{123} &\equiv  2048 \mod 29 \\
+        2^{123} &\equiv  18 \mod 29 
+    \end{align}
+\end{answer}
+% --------------------------------------------------------------
+%     You don't have to mess with anything below this line.
+% --------------------------------------------------------------
+
+\end{document}
