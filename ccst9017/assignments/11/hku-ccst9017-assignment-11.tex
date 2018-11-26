@@ -1,0 +1,89 @@
+% --------------------------------------------------------------
+% This is all preamble stuff that you don't have to worry about.
+% Head down to where it says "Start here"
+% --------------------------------------------------------------
+ 
+\documentclass[12pt]{article}
+ 
+    \usepackage[margin=1in]{geometry} 
+    \usepackage{amsmath,amsthm,amssymb,nicefrac}
+    \usepackage{hyperref}
+     
+    \newcommand{\N}{\mathbb{N}}
+    \newcommand{\Z}{\mathbb{Z}}
+     
+    \newenvironment{theorem}[2][Theorem]{\begin{trivlist}
+    \item[\hskip \labelsep {\bfseries #1}\hskip \labelsep {\bfseries #2.}]}{\end{trivlist}}
+    \newenvironment{lemma}[2][Lemma]{\begin{trivlist}
+    \item[\hskip \labelsep {\bfseries #1}\hskip \labelsep {\bfseries #2.}]}{\end{trivlist}}
+    \newenvironment{exercise}[2][Exercise]{\begin{trivlist}
+    \item[\hskip \labelsep {\bfseries #1}\hskip \labelsep {\bfseries #2.}]}{\end{trivlist}}
+    \newenvironment{reflection}[2][Reflection]{\begin{trivlist}
+    \item[\hskip \labelsep {\bfseries #1}\hskip \labelsep {\bfseries #2.}]}{\end{trivlist}}
+    \newenvironment{proposition}[2][Proposition]{\begin{trivlist}
+    \item[\hskip \labelsep {\bfseries #1}\hskip \labelsep {\bfseries #2.}]}{\end{trivlist}}
+    \newenvironment{corollary}[2][Corollary]{\begin{trivlist}
+    \item[\hskip \labelsep {\bfseries #1}\hskip \labelsep {\bfseries #2.}]}{\end{trivlist}}
+    \newenvironment{question}[2][Question]{\begin{trivlist}
+    \item[\hskip \labelsep {\bfseries #1}\hskip \labelsep {\bfseries #2.}]}{\end{trivlist}}
+    \newenvironment{answer}[2][Answer]{\begin{trivlist}
+    \item[\hskip \labelsep {\bfseries #1}\hskip \labelsep {\bfseries #2.}]}{\end{trivlist}}
+    
+     
+\begin{document}
+
+% --------------------------------------------------------------
+%                         Start here
+% --------------------------------------------------------------
+
+%\renewcommand{\qedsymbol}{\filledbox}
+
+\title{Assignment 11}%replace X with the appropriate number
+\author{Michael Lee\\ %replace with your name
+	CCST9017 - Hidden Order in Daily Life: A Mathematical Perspective \\
+	University Number 3035569110 \\
+	Tutorial Group 009
+} %if necessary, replace with your course title
+
+
+\maketitle
+
+\begin{question}{Q. 1}
+	Google Twins
+\end{question}
+\begin{answer}{Q. 1}
+    \hfill \break
+    Note that the below score are computed using the IPython notebook here: \url{''https://github.com/michaellee8/hku-ccst9017/blob/master/ccst9017/assignments/11/HKU_CCST9017_Assignment_11_Q1.ipynb''} \\
+    One may open it in Google Colab using that button! \\ \\
+    Originally: \\
+    100th iteration score is given by:
+    \begin{equation}
+        x^{[100]}_n=\left[\begin{matrix}1.54838709677419\\0.516129032258065\\1.16129032258065\\0.774193548387097\end{matrix}\right]
+    \end{equation}
+    Hence the ranking in descending order is: Page 1, Page 3, Page 4, Page 2 \\ \\
+    Now: \\
+    100th iteration score is given by:
+    \begin{equation}
+        x^{[100]}_n=\left[\begin{matrix}1.22448979591837\\0.408163265306121\\1.83673469387755\\0.612244897959183\\0.918367346938778\end{matrix}\right]
+    \end{equation}
+    Hence the ranking in descending order is: Page 3, Page 1, Page 5, Page 4, Page 2 \\
+    Therefore it helps boost page 3's score
+\end{answer}
+
+\begin{question}{Q. 2}
+	Eigenvalue of column stochastic matrix 
+\end{question}
+\begin{answer}{Q. 2}
+	\hfill \break
+    Since $A$ is a column stochastic matrix, $a,b,c,d < 1$ and $a+c=b+d=1$. \\
+    And a 1-eigenvector can be computed with $A^k \begin{bmatrix}1 & 1\end{bmatrix}^T$.  \\
+    Hence one of the eigen value is 1. \\
+    Since $a+d$ is the sum of root of the polynominal, and $a,d<1$ \\ hence sum of the eigenvalue is smaller than 2 \\
+    Since one of the eigenvalue is 1, another eigenvalue must be smaller than 1. \\
+    Hence there are no such eigenvalue larger than 1
+\end{answer}
+% --------------------------------------------------------------
+%     You don't have to mess with anything below this line.
+% --------------------------------------------------------------
+
+\end{document}
